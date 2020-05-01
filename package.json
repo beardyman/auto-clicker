@@ -1,8 +1,12 @@
 {
   "name": "simple-auto-clicker",
   "version": "1.0.1",
-  "description": "",
+  "description": "A simple auto clicker",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beardyman/auto-clicker"
+  },
   "bin": {
     "clicker": "./index.js"
   },
