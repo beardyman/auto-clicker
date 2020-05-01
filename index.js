@@ -6,12 +6,14 @@ const argv = require('minimist')(process.argv.slice(2),
     alias: {
       delay: 'd',
       freeMove: 'f',
-      safe: 's'
+      safe: 's',
+      verbose: 'v'
     },
     default: {
       delay: 10,
       freeMove: false,
-      safe: true
+      safe: true,
+      verbose: false
     }
   });
 
@@ -22,11 +24,14 @@ if(argv.safe && argv.delay < 10) {
 }
 
 setInterval(() => {
+  let currentPosition;
   if (!argv.freeMove) {
+    // give the user some time to put the mouse where they want the clicking to happen.
     if (!setPosition) {
       setPosition = robo.getMousePos();
     }
-    const currentPosition = robo.getMousePos();
+    // save off the current position of the mouse to put it back later
+    currentPosition = robo.getMousePos();
     if (argv.verbose) {
       console.log(`clicking at ${setPosition.x}, ${setPosition.y}`);
     }
