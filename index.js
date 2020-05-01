@@ -31,11 +31,13 @@ setInterval(() => {
       setPosition = robo.getMousePos();
     }
     // save off the current position of the mouse to put it back later
-    currentPosition = robo.getMousePos();
-    if (argv.verbose) {
-      console.log(`clicking at ${setPosition.x}, ${setPosition.y}`);
-    }
+    currentPosition = robo.getMousePos()
     robo.moveMouse(setPosition.x, setPosition.y);
+  }
+
+  if (argv.verbose) {
+    const nowPosition = robo.getMousePos();
+    console.log(`Clicking at ${nowPosition.x}, ${nowPosition.y}`);
   }
 
   // do the click!
