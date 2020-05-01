@@ -3,7 +3,7 @@ A cli based auto-clicker for your auto-clicking needs.
 
 ## Install
 ```shell script
-npm i -g auto-clicker
+npm i -g simple-auto-clicker
 ```
 
 ## Usage
