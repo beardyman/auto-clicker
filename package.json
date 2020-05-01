@@ -1,6 +1,6 @@
 {
   "name": "simple-auto-clicker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -9,7 +9,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["clicker", "auto-clicker"],
+  "keywords": [
+    "clicker",
+    "auto-clicker"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
